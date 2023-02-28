@@ -1,0 +1,18 @@
+{
+  "name": "mencari-angka",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js --no-stdin flag"
+  },
+  "dependencies": {
+    "inquirer": "^9.1.4",
+    "readline": "^1.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
