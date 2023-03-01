@@ -81,3 +81,15 @@ END IF
 END
 
 ```
+
+"dependencies": {
+    "inquirer": "^9.1.4",
+    "readline": "^1.3.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^18.14.2",
+    "nodemon": "^2.0.20",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.5"
+  }

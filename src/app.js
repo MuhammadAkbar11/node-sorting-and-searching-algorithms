@@ -82,33 +82,41 @@ async function main() {
 
 // Implementasi algoritma sorting (Quick Sort)
 function sorting(array) {
+  // jika panjang array kurang dari sama dengan 1, maka langsung return array
   if (array.length <= 1) {
     return array;
   }
 
-  const pivot = array[0];
-  const left = [];
-  const right = [];
+  const pivot = array[0]; // ambil elemen pertama array sebagai pivot
+  const left = []; // array untuk menyimpan elemen yang lebih kecil dari pivot
+  const right = []; // array untuk menyimpan elemen yang lebih besar dari pivot
 
+  // iterasi untuk bandingkan antara setiap elemen dengan pivot
   for (let i = 1; i < array.length; i++) {
     if (array[i] < pivot) {
+      // jika elemen kurang dari pivot maka simpan di array left
       left.push(array[i]);
     } else {
+      // jika elemen lebih besar dari pivot maka simpan di array right
       right.push(array[i]);
     }
   }
 
+  // gabung array hasil sorting dari elemen-elemen yang lebih kecil dari pivot dengan pivot dengan array hasil sorting dari elemen-elemen yang lebih besar dari pivot
   return sorting(left).concat(pivot, sorting(right));
 }
 
 // Implementasi algoritma searching (Linear Search)
 function searching(array, key) {
+  // iterasi untuk membandingkan setiap elemen dengan key
   for (let i = 0; i < array.length; i++) {
     if (array[i] === key) {
+      // jika elemen sama dengan key, maka return index elemen tersebut
       return i;
     }
   }
 
+  // jika tidak ditemukan, maka return -1
   return -1;
 }
 
